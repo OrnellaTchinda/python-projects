@@ -25,13 +25,15 @@ response = dog_data.json()
 #Grab the image link from the json response
 image = response["message"]
 
+
 #Print the link that the user can copy and paste to see the dog
 
-# if image == "Breed not found (master breed does not exist)":
-#     user_input = input( "Not a Breed. Here is a list to help you ' " + ", ".join(option)+ "' Try again: " )
-    
-# else:
-print("Copy and Paste this link in your browser : " + image)        
+if image == "Breed not found (master breed does not exist)":
+    print("Not a Breed. Here is a list to help you ' " + ", ".join(option)+ "' Try again: ")
+        # user_input = input( "Not a Breed. Here is a list to help you ' " + ", ".join(option)+ "' Try again: " )
+        
+else:
+    print("Copy and Paste this link in your browser : " + image)        
 
 #Optimization: Handling error when file doesn't exist
     
